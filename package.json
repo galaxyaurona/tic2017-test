@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "The backend for the TIC2017.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/telstrachallenge2017/backend.git"
+  },
+  "keywords": [
+    "Telstra",
+    "Innovation",
+    "Challenge",
+    "2017"
+  ],
+  "author": "da best team",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/telstrachallenge2017/backend#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1"
+  }
+}
