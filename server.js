@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 
 app.post('/measurement/measurements', function(req, res) {
     console.log("Body of request:",req.body)
-    res.send('Worked!');
+    res.json({"success":true});
 });
 
 // Create the server.
