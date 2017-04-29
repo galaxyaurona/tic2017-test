@@ -19,7 +19,7 @@ app.use(bodyParser.json({ type: '*/*' }));
 
 // Use our project defined routes.
 app.get('/', function(req, res) {
-    res.send('Hello, worlds!');
+    res.send('Hello, worlds 2!');
 });
 
 app.post('/measurement/measurements', function(req, res) {
