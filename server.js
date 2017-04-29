@@ -231,7 +231,7 @@ app.post('/check-result', function (req, res) {
                         return console.error('upload failed:', err);
                     }
                     console.log('Upload successful!  Server responded with:', body);
-                    t
+                    
                     res.json(body)
                     fs.unlinkSync(filename);
                 });
