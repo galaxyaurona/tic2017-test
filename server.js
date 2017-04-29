@@ -188,7 +188,9 @@ app.post('/check-result', function (req, res) {
 
                 wholeImageString = wholeImage.join("");
 
+                // DEBUG
                 console.log("wholeImageString: ", wholeImageString);
+                // END DEBUG
 
                 // for testing purpose
                 /*
@@ -226,7 +228,7 @@ app.post('/check-result', function (req, res) {
                         return console.error('upload failed:', err);
                     }
                     console.log('Upload successful!  Server responded with:', body);
-
+                    t
                     res.json(body)
                     fs.unlinkSync(filename);
                 });
