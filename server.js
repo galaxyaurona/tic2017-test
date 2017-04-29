@@ -77,12 +77,12 @@ var reqOptions = {
 request.post(reqOptions, function optionalCallback(err, httpResponse, body) {
     if (err) {
 
-      
-    
+
+
         return console.error('upload failed:', err);
     }
     console.log('Upload successful!  Server responded with:', body);
-  
+
 });
 
 // CONNECT TO DATABASE
@@ -150,6 +150,10 @@ app.post('/measurement/measurements', function (req, res) {
 });
 
 app.post('/upload-image-fragment', function (req, res) {
+    // DEBUG
+    console.log(req);
+    // END DEBUG
+    
     console.log(req.body);
 
     var query = { 'imageID': req.body.imageID, 'packet': req.body.packet };
@@ -165,7 +169,7 @@ app.post('/upload-image-fragment', function (req, res) {
 
 
 });
-// check result 
+// check result
 app.post('/check-result', function (req, res) {
 
     var query = { 'imageID': req.body.imageID };
