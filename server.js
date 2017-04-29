@@ -184,6 +184,10 @@ app.post('/check-result', function (req, res) {
                 fragments.forEach(function (current, index, array) {
                     var arrayIndex = parseInt(current.packet);
                     wholeImage[arrayIndex] = current.data;
+
+                    // DEBUG
+                    console.log("current.data: ", current.data);
+                    // END DEBUG
                 })
 
                 wholeImageString = wholeImage.join();
