@@ -4,6 +4,7 @@
   "description": "The backend for the TIC2017.",
   "main": "index.js",
   "scripts": {
+    "dev":"nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,9 @@
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "express": "^4.15.2",
-    "morgan": "^1.8.1"
+    "mongoose": "^4.9.6",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0"
   }
 }
