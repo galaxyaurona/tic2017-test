@@ -137,10 +137,12 @@ app.use(morgan('combined'));
 app.use(cors());
 
 // Parse all http request bodies as JSON.
-app.use(bodyParser.json());
+app.use(bodyParser.json({ type: '*/*' }));
 
 // Use our project defined routes.
 app.get('/', function (req, res) {
+    console.log("Body of request: ", req.body);
+
     res.send('Hello, worlds 2!');
 });
 
