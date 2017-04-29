@@ -137,7 +137,7 @@ app.use(morgan('combined'));
 app.use(cors());
 
 // Parse all http request bodies as JSON.
-app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.json());
 
 // Use our project defined routes.
 app.get('/', function (req, res) {
@@ -150,11 +150,7 @@ app.post('/measurement/measurements', function (req, res) {
 });
 
 app.post('/upload-image-fragment', function (req, res) {
-    // DEBUG
-    console.log(req);
-    // END DEBUG
-    
-    console.log(req.body);
+    console.log("Body of request:", req.body);
 
     var query = { 'imageID': req.body.imageID, 'packet': req.body.packet };
 
