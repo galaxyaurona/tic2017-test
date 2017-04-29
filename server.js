@@ -60,6 +60,31 @@ fs.readFile('./69.jpg', 'utf8', function (err, data) {
 
 });
 */
+
+// TEST request
+
+var formData = {
+    // Pass data via Streams
+    image: fs.createReadStream("./69.jpg"),
+
+}
+var reqOptions = {
+    url: "http://107.170.61.128/detect-goofy-json",
+    formData: formData
+}
+//https://github.com/request/request
+// make request
+request.post(reqOptions, function optionalCallback(err, httpResponse, body) {
+    if (err) {
+
+      
+    
+        return console.error('upload failed:', err);
+    }
+    console.log('Upload successful!  Server responded with:', body);
+  
+});
+
 // CONNECT TO DATABASE
 mongoose.connect("mongodb://admin:admin@ds123331.mlab.com:23331/tic2017", function (err) {
     if (err) {
@@ -70,6 +95,7 @@ mongoose.connect("mongodb://admin:admin@ds123331.mlab.com:23331/tic2017", functi
         //BlockCypherService.queryMissedHookResult();
     }
 })
+/*
 // TEST2 QUERY
 var query = {
     imageID: "test2",
@@ -103,7 +129,7 @@ ImageFragment.find(query, function (err, fragments) {
     /// write to file the buffer
     fs.writeFileSync("./newData.jpg", buf)
 })
-
+*/
 // Morgan will post a log of any requests made to the server.
 app.use(morgan('combined'));
 
