@@ -139,6 +139,7 @@ app.post('/upload-image-fragment', function (req, res) {
 
 
 });
+// check result 
 app.post('/check-result', function (req, res) {
 
     var query = { 'imageID': req.body.imageID };
@@ -182,6 +183,8 @@ app.post('/check-result', function (req, res) {
                     url: "http://107.170.61.128/detect-goofy-json",
                     formData: formData
                 }
+                //https://github.com/request/request
+                // make request
                 request.post(reqOptions, function optionalCallback(err, httpResponse, body) {
                     if (err) {
 
