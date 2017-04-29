@@ -169,6 +169,7 @@ app.post('/upload-image-fragment', function (req, res) {
 });
 // check result
 app.post('/check-result', function (req, res) {
+    console.log("Body of request: ", req.body);
 
     var query = { 'imageID': req.body.imageID };
     var total = parseInt(req.body.total);
@@ -177,6 +178,8 @@ app.post('/check-result', function (req, res) {
         if (err) {
             console.log(err)
         } else {
+            console.log("fragments.length: ", fragments.length);
+            console.log("req.body.total: ", total);
             if (fragments.length != total) {
                 return res.json({ "success": false, "uploadFailure": true });
             } else {
